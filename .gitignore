@@ -1,0 +1,47 @@
+# Archivos generados por Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.obj
+*.log
+
+# Archivos y carpetas de compilación
+bin/
+obj/
+*.dll
+*.exe
+
+# Archivos de configuración local
+appsettings.json
+appsettings.Development.json
+
+# Archivos de lock de dependencias
+project.lock.json
+project.fragment.lock.json
+
+# Archivos generados por NuGet
+*.nupkg
+*.snupkg
+packages/
+project.assets.json
+
+# Archivos temporales de ASP.NET
+*.db
+*.db-shm
+*.db-wal
+
+# Archivos de publicaciones
+publish/
+wwwroot/
+
+# Configuración de Rider o Resharper
+.idea/
+*.DotSettings.user
+
+# Configuración de VS Code
+.vscode/
+
+# Otros archivos innecesarios
+notes.txt

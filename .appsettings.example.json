@@ -1,0 +1,15 @@
+{
+  "ApiSettings": {
+    "SecretKey": "********************"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "SQLServerConnection": "Server=ServerName;Database=database;User Id=username;Password=password;TrustServerCertificate=True;"
+  }
+}
