@@ -2,6 +2,7 @@
 using api_rest_netcore.Models.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 
 namespace api_rest_netcore.Controllers
 {
@@ -19,6 +20,7 @@ namespace api_rest_netcore.Controllers
 
         // GET: api/users  
         [HttpGet]
+        //[EnableCors("PolicyCORS")] -> Habilitar cors para un metodo especifico
         public IActionResult GetUsers() //  IActionResult permite devolver respuestas HTTP flexibles (Ok, NotFound, etc.)
         {
             var users = _usRepo.GetUsers(); // Usa el método GetUsers del repositorio, que devuelve una colección de UserDto.

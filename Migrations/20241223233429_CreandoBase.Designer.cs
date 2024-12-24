@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using api_rest_netcore.Data;
 
@@ -11,9 +12,11 @@ using api_rest_netcore.Data;
 namespace api_rest_netcore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241223233429_CreandoBase")]
+    partial class CreandoBase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,25 +62,25 @@ namespace api_rest_netcore.Migrations
 
             modelBuilder.Entity("api_rest_netcore.Models.Contact", b =>
                 {
-                    b.Property<int>("ContactId")
+                    b.Property<int>("contacto_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactId"));
-
-                    b.Property<string>("ContactName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("contacto_id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ContactId");
+                    b.Property<string>("nombreContacto")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("contacto_id");
 
                     b.ToTable("Contacts", "colegio");
                 });
